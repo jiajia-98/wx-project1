@@ -1,0 +1,411 @@
+page {
+  font-family: PingFang SC;
+}
+
+.container-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.hello {
+  display: flex;
+  align-items: center;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin: 68rpx 0 0 30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #000000;
+
+}
+
+.lint-color {
+  color: #B1B1B1;
+}
+
+.right {
+  width: 18rpx;
+  height: 36rpx;
+  margin-left: 32rpx;
+  font-weight: normal;
+}
+
+/* 当前任务开始 */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20rpx 36rpx 60rpx;
+  box-sizing: border-box;
+}
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-ch {
+  width: 240rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 60rpx;
+  /* background-color: red; */
+}
+
+.task-ch text {
+  font-weight: bold;
+}
+
+.task-en {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240rpx;
+  /* background-color: green; */
+  font-size: 20rpx;
+  color: #cccccc;
+}
+
+.task-en .task-line {
+  width: 112rpx;
+  height: 10rpx;
+  background-color: #cccccc;
+}
+
+.scan {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.scan image {
+  width: 100%;
+  height: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  width: 680rpx;
+  height: 194rpx;
+  margin-top: 14rpx;
+  background-color: #333333;
+  border-radius: 24rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.meessage {
+  width: 320rpx;
+  /* background-color: green; */
+  text-align: center;
+}
+
+.time {
+  display: flex;
+  line-height: 44rpx;
+}
+
+.time .id-logo {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+  color: #222222;
+  background-color: #fff;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+.num {
+  margin-top: 22rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.num .num-cube {
+  font-weight: 300;
+}
+
+.num-hour {
+  font-weight: 400;
+}
+
+.back {
+  display: flex;
+  justify-content: space-between;
+  height: 44rpx;
+  color: #21E8FF;
+  font-size: 32rpx;
+}
+
+.car {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 20rpx;
+}
+
+.car image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 当前任务结束 */
+/* 运量统计开始 */
+.traffic-statistics {
+  width: 100%;
+  height: 240rpx;
+  margin-top: 20rpx;
+  padding: 30rpx 36rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 34rpx;
+  color: #999999;
+}
+
+.total-en {
+  margin-left: 20rpx;
+  font-weight:300;
+}
+
+.point {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 26rpx;
+}
+
+.point view {
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  background-color: #222222;
+}
+
+.statistics-nums {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.price {
+  width: 294rpx;
+}
+
+.volume {
+  width: 260rpx;
+  box-sizing: border-box;
+  /* padding: 0 60rpx; */
+  text-align: center;
+  border-left: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+}
+
+.ranks {
+  width: 120rpx;
+}
+
+.num-item .number {
+  font-size: 52rpx;
+  font-weight: bold;
+}
+
+/* 运量统计结束 */
+.bgc {
+  width: 100%;
+  height: 20rpx;
+  background: rgba(242, 242, 242, 1);
+}
+
+/* 上报开始 */
+.send {
+  width: 100%;
+  padding: 35rpx 36rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(242, 242, 242, 1);
+}
+
+.send .send-item {
+  width: 204rpx;
+  height: 186rpx;
+  border-radius: 24rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.unusual {
+  background-color: #D97400;
+}
+
+.unusual:hover {
+  background-color: #FFB300;
+}
+
+.pause {
+  background-color: #00ADC1;
+}
+
+.pause:hover {
+  background-color: #0CE0E8;
+}
+
+.normal {
+  background-color: #007534;
+}
+
+.normal:hover {
+  background-color: #00C558;
+}
+
+.send-logo {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 32rpx auto 10rpx;
+}
+
+/* 上报结束 */
+/* 个人信息开始 */
+.profile-box{
+  width: 100%;
+  height: 280rpx;
+  position: relative;
+}
+.profile {
+  width: 100%;
+  height: 280rpx;
+  padding: 0 36rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #999999;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  /* 不显示背面 */
+  backface-visibility: hidden;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 34rpx;
+  line-height: 34rpx;
+  margin-top: 30rpx;
+}
+
+.profile-title-text {
+  display: flex;
+
+}
+
+.profile-en {
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.profile-title-eidt {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.profile-title-eidt image {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-content {
+  width: 100%;
+  height: 134rpx;
+  margin-top: 38rpx;
+  display: flex;
+}
+
+.photo {
+  width: 134rpx;
+  height: 134rpx;
+  box-sizing: border-box;
+  border: 2px solid rgba(51, 51, 51, 1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo image {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-message {
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.profile-person {
+  height: 56rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 56rpx;
+  box-sizing: border-box;
+  font-size: 40rpx;
+  color: #222222;
+}
+
+.profile-name {
+  font-weight: bold;
+  width: 128rpx;
+}
+
+.phone-logo {
+  width: 40rpx;
+  height: 40rpx;
+  margin: -5rpx 3rpx 0 42rpx;
+}
+
+.phone-logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.phone-number {
+  font-size: 32rpx;
+  width: 212rpx;
+  margin-left: 8rpx;
+}
+
+.profile-car {
+  width: 468rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.none-work{
+  text-align: center;
+}
+/* 个人信息结束 */

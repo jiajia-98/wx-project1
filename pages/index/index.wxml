@@ -1,0 +1,132 @@
+<view class="container-box">
+	<view class="hello">
+		<text class="lint-color">你好，</text>
+		{{driverDetails.car.carNumber}} <text class="lint-color "> | </text> {{driverDetails.drivernName}}
+		<image src="/assets/images/right.svg" class="right"></image>
+	</view>
+	<!-- 当前任务开始 -->
+	<view class="header">
+		<view class="header-title">
+			<view class="current-task">
+				<view class="task-ch">
+					<text>当前</text>任务</view>
+				<view class="task-en">
+					<text class="task-line"></text>
+					<text>Current task</text>
+				</view>
+			</view>
+			<view class="scan" bindtap="handleScan">
+				<image src="/assets/images/scan.svg"></image>
+			</view>
+		</view>
+		<view wx:if="{{isOrder}}" class="header-content">
+			<view class="meessage">
+				<view class="time">
+					<view class="id-logo">ID</view>
+					<view>2020-009159</view>
+				</view>
+				<view class="num">
+					<text class="num-cube">{{driverDetails.order.orderVolum}}</text>
+					<text class="num-hour">{{driverDetails.order.consume}}</text>
+				</view>
+			</view>
+			<view class="back">
+				<view class="car">
+					<image src="/assets/images/car_2.svg"></image>
+				</view>
+				<view class="back-factory">{{driverDetails.order.orderstatusStr}}</view>
+			</view>
+		</view>
+		<view wx:else class="header-content">
+			<text class="none-work">当前无任务</text>
+		</view>
+	</view>
+	<!-- 当前任务结束 -->
+	<view class="bgc"></view>
+	<!-- 运量统计开始 -->
+	<view class="traffic-statistics">
+		<view class="total">
+			<view>
+				<text class="total-ch">运量统计 (总计)</text>
+				<text class="total-en">Total transportation statistics</text>
+			</view>
+			<view class="point">
+				<view class="point-item"></view>
+				<view class="point-item"></view>
+				<view class="point-item"></view>
+			</view>
+
+		</view>
+		<view class="statistics-nums">
+			<view class="num-item prcie">
+				<text class="number">{{driverDetails.totalMoney}}</text>
+				<view>元</view>
+			</view>
+			<view class="num-item volume">
+				<text class="number">{{driverDetails.totalVolume}}</text>
+				<view>立方</view>
+			</view>
+			<view class="num-item ranks">
+				<text class="number">{{driverDetails.totalCount}}</text>
+				<view>趟</view>
+			</view>
+		</view>
+	</view>
+	<!-- 运量统计结束 -->
+
+	<!-- 上报开始 -->
+	<view class="send">
+		<view class="unusual send-item">
+			<image class="send-logo" src="/assets/images/send_logo_1.svg"></image>
+			<view class="">异常上报</view>
+		</view>
+		<view class="pause send-item">
+			<image class="send-logo" src="/assets/images/send_logo_2.svg"></image>
+			<view class="">暂停上报</view>
+		</view>
+		<view class="normal send-item">
+			<image class="send-logo" src="/assets/images/send_logo_3.svg"></image>
+			<view class="">正常上报</view>
+		</view>
+	</view>
+	<!-- 上报结束 -->
+	<!-- 个人信息开始 -->
+	<view class="profile-box">
+		<view class="profile profile-card1">
+			<view class="profile-title">
+				<view class="profile-title-text">
+					<text class="profile-ch">个人信息</text>
+					<text class="profile-en">My personal information</text>
+				</view>
+				<view class="profile-title-eidt">
+					<!-- <image src="/assets/images/edit.svg"></image> -->
+				</view>
+			</view>
+			<view class="profile-content">
+				<view class="photo">
+					<image src="/assets/images/photo.svg"></image>
+				</view>
+				<view class="profile-message">
+					<view class="profile-person">
+						<view class="profile-name">{{driverDetails.drivernName}}</view>
+						<view class="phone-logo">
+							<image src="/assets/images/phone.svg"></image>
+						</view>
+						<view class="phone-number">{{driverDetails.driverPhone}}</view>
+					</view>
+					<view wx:if="{{isCar}}" class="profile-car">
+						<text>{{driverDetails.car.carNumber}}</text>
+						<text>{{driverDetails.car.carStatusStr}}</text>
+						<text>{{driverDetails.car.carVolume}}</text>
+					</view>
+					<view wx:else class="profile-car">
+						<text></text>
+						<text></text>
+						<text></text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 个人信息结束 -->
+</view>
