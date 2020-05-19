@@ -1,0 +1,43 @@
+.navbar {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+.navbar-title { 
+  width: 100%;
+  box-sizing: border-box;
+  /* padding-top: 5rpx; */
+  padding-left: 30rpx;
+  height: 32px;
+  line-height: 32px;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+.navbar-title text{
+  color: #B1B1B1;
+}
+.navbar-title text.line{
+  margin: 0 10rpx 6rpx;
+}
+.navbar-title .right{
+  width: 9px;
+  height: 18px;
+  margin-left: 6px;
+  margin-top: 3.5px;
+}
+.navbar-title .right image{
+  width: 9px;
+  height: 18px;
+}

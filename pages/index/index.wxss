@@ -1,16 +1,13 @@
 page {
   font-family: PingFang SC;
 }
-
 .container-box {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
-
-.hello {
+/* .hello {
   display: flex;
   align-items: center;
   height: 36rpx;
@@ -19,7 +16,6 @@ page {
   font-size: 28rpx;
   font-weight: bold;
   color: #000000;
-
 }
 
 .lint-color {
@@ -31,7 +27,7 @@ page {
   height: 36rpx;
   margin-left: 32rpx;
   font-weight: normal;
-}
+} */
 
 /* 当前任务开始 */
 .header {
@@ -409,3 +405,34 @@ page {
   text-align: center;
 }
 /* 个人信息结束 */
+
+/* 扫码弹框开始 */
+.code-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400rpx;
+  height: 200rpx;
+  background-color: #ccc;
+  font-size: 35rpx;
+}
+.handle-box{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.cancel{
+  flex: 1;
+  text-align: center;
+}
+.confirm{
+  flex: 1;
+  text-align: center;
+}
+
+
+/* 扫码弹框结束 */

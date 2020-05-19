@@ -2,7 +2,8 @@
 //获取应用实例
 const app = getApp()
 import {
-  hrequestGet
+  hrequestGet,
+  hrequestPost
 } from '../../static/hunit.wx'
 import api from '../../assets/api'
 const {
@@ -11,31 +12,32 @@ const {
 Page({
   data: {
     driverDetails: {},
-    isOrder:false,
-    isCar:false
+    isOrder: false,
+    isCar: false,
+    urlInfo:[]
   },
   // 获取数据信息
   async getDriverInfo() {
     let _res = await hrequestGet(getDriver)
-    console.log(_res);
+    // console.log(_res);
     // 判断是否有order信息
-    if(Object.keys(_res.order).length !== 0){
+    if (Object.keys(_res.order).length !== 0) {
       this.setData({
-        isOrder:true
+        isOrder: true
       })
-    }else {
+    } else {
       this.setData({
-        isOrder:false
+        isOrder: false
       })
     }
     // 判断是否有car信息
-    if(Object.keys(_res.car).length !== 0){
+    if (Object.keys(_res.car).length !== 0) {
       this.setData({
-        isCar:true
+        isCar: true
       })
-    }else {
+    } else {
       this.setData({
-        isCar:false
+        isCar: false
       })
     }
 
@@ -45,10 +47,27 @@ Page({
     })
   },
   // 扫码操作
-  handleScan() {
+  handleScan(params) {
+    var that = this
     wx.scanCode({
-      success (res) {
+      success(res) {
         console.log(res)
+        let strUrl = res.result
+        // 获取 指定字符串的
+        let querys = strUrl.substring(strUrl.indexOf('?') + 1).split('&');
+        let result = [];
+        for (let i = 0; i < querys.length; i++) {
+          let temp = querys[i].split('=');
+          if (temp.length < 2) {
+            result[temp[0]] = '';
+          } else {
+            result[temp[0]] = temp[1];
+          }
+        }
+        console.log(result);
+        that.setData({
+          urlInfo:result
+        })
       }
     })
   },

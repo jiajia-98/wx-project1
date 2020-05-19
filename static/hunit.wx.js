@@ -2,7 +2,8 @@
 const request = (url, method, data, completeFn, headerData) => {
 	return new Promise((resolve, reject) => {
 		let _data = {
-			...headerData
+			...headerData,
+			Authorization:wx.getStorageSync('token')
 		}
 		wx.request({
 			url: url,

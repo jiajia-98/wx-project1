@@ -1,0 +1,11 @@
+<view class="navbar custom-class" style='height:{{navHeight}}px;background-color:{{bgColor}}'>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    <text>你好，</text>
+    <view>{{pageNums}}</view>
+    <text class="line">|</text>
+    <view>{{pageName}}</view>
+    <view class="right">
+      <image src="/assets/images/right.svg"></image>
+    </view>
+  </view>
+</view>
