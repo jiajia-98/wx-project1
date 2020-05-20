@@ -1,1 +1,20 @@
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
+<image class="bg" src="/assets/images/author_bg.png"/>
+<view class="author-box">
+  <view class="author-title">
+    <view>
+      <view class="title-ch">昝岗搅拌站</view>
+      <view class="title-en">ZAN'GANG MIXING STATION</view>
+    </view>
+    <view class="driver-logo">
+      <image src="/assets/images/driver_logo.png"/>
+    </view>
+  </view>
+  <view class="dirvie-texts">
+    <view class="dirver">司机师傅，您辛苦了！</view>
+    <view class="prompt-ch">为了方便绑定您的真实信息，请点击下方按钮</view>
+    <view class="prompt-en">For the convenience of binding your real information
+please click the button below</view>
+  </view>
+  <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="w">授权登录</button>
+  <image class="company-logo" src="/assets/images/company_logo.png"/>
+</view>

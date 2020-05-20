@@ -1,9 +1,22 @@
-<view class="input-user">
-  <text>用户名</text>
-	<input class="weui-input" placeholder="请输入用户名" />
+<image class="bg" src="/assets/images/login_bg.png" />
+<view class="login-box">
+	<image class="logo" src="/assets/images/compony_dirver_logo.png" />
+	<view class="confirm-texts">
+		<view class="please-login">请您登录</view>
+		<view class="confirm-ch">如果忘记或者暂未获得用户名和密码，请联系管理员</view>
+		<view class="confirm-en">If you forget or do not get the user name and password
+			please contact the administrator</view>
+	</view>
+	<view class="input">
+		<view class="username">
+			<input type="text" placeholder="请输入用户名" value="{{username}}" bindinput="bindUsername"></input>
+		</view>
+		<view class="password">
+			<input type="text" password placeholder="请输入密码" value="{{password}}" bindinput="bindPassword"></input>
+		</view>
+	</view>
+	<view class="btns">
+		<button class="login-btn" bindtap="login">登  录</button>
+		<button class="cancle-btn">取消</button>
+	</view>
 </view>
-<view class="input-pasword">
-  <text>密码</text>
-	<input class="weui-input" placeholder="请输入密码" />
-</view>
-<button bindtap="login">登录</button>

@@ -14,7 +14,8 @@ Page({
     driverDetails: {},
     isOrder: false,
     isCar: false,
-    urlInfo:[]
+    urlInfo:[],
+    isConfirmCar:true
   },
   // 获取数据信息
   async getDriverInfo() {

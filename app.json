@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/author/author",
-    "pages/login/login"
+    "pages/author/author", 
+    "pages/login/login",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

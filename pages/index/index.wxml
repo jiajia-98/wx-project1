@@ -1,10 +1,4 @@
-
 <view class="container-box view-page">
-	<!-- <view class="hello">
-		<text class="lint-color">你好，</text>
-		{{driverDetails.car.carNumber}} <text class="lint-color "> | </text> {{driverDetails.drivernName}}
-		<image src="/assets/images/right.svg" class="right"></image>
-	</view> -->
 	<navbar page-nums="Ag34222" page-name="王师傅"></navbar>
 	<!-- 当前任务开始 -->
 	<view class="header">
@@ -123,9 +117,6 @@
 						<text>{{driverDetails.car.carVolume}}</text>
 					</view>
 					<view wx:else class="profile-car">
-						<text></text>
-						<text></text>
-						<text></text>
 					</view>
 				</view>
 			</view>
@@ -133,11 +124,18 @@
 	</view>
 	<!-- 个人信息结束 -->
 	<!-- 扫码弹框开始 -->
-	<view class="code-box">
-		<view class="car-num">当前车辆车牌号为：123</view>
-		<view class="handle-box">
-			<view class="cancel">取消绑定</view>
-			<view class="confirm">确认绑定</view>
+	<view class="code-box" hidden="{{isConfirmCar}}">
+		<view class="code-content">
+			<view class="car-number">京AC665P</view>
+			<view class="confirm-message">
+				<view class="message-ch">请核实您扫描车辆二维码的结果与车辆的车牌号是否一致</view>
+				<view class="message-en">Please check whether the result of scanning the vehicle QR code
+					is consistent with the license plate number of the vehicle</view>
+			</view>
+			<view class="btns">
+				<button class="login-btn">确认绑定</button>
+				<button class="cancle-btn">关闭</button>
+			</view>
 		</view>
 	</view>
 	<!-- 扫码弹框结束 -->

@@ -34,7 +34,7 @@
 .navbar-title .right{
   width: 9px;
   height: 18px;
-  margin-left: 6px;
+  margin-left: 16px;
   margin-top: 3.5px;
 }
 .navbar-title .right image{
